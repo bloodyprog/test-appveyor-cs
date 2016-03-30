@@ -31,5 +31,5 @@ project("TestCSharp.NUnit-3.2.0")
 
     links { "dependencies/nunit-3.2.0/bin/nunit.framework.dll" }
 
-    configuration { "vs*" }
-        postbuildcommands { "\"$(SolutionDir)..\\dependencies\\nunit-3.2.0\\bin\\nunit3-console.exe\" $(TargetPath)" }
+    --configuration { "vs*" }
+    --    postbuildcommands { "\"$(SolutionDir)..\\dependencies\\nunit-3.2.0\\bin\\nunit3-console.exe\" $(TargetPath)" }
