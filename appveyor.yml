@@ -1,0 +1,33 @@
+environment:
+  matrix:
+    #- VS_VERSION: vs2012
+    #- VS_VERSION: vs2013
+    - VS_VERSION: vs2015
+
+configuration:
+    - Debug
+
+install:
+    - git submodule update --init --recursive
+
+    # test messages
+    - appveyor AddMessage "test message"
+    - appveyor AddMessage "test warning" -Category Warning
+    - appveyor AddMessage "test error"   -Category Error
+
+    # test chocolatey
+    - choco install wget
+    - choco list -localonly
+
+    # test batch setup
+    - build\setup-premake.bat
+    - build\setup-nunit.bat
+
+    # test build system
+    - cd build
+    - dependencies\premake\premake5.exe %VS_VERSION%
+    - cd ..
+
+on_finish:
+    # remote desktop
+    #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
