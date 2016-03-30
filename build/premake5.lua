@@ -12,16 +12,16 @@ workspace("AppVeyor")
         targetdir("../output/bin/release")
         objdir("../output/tmp/release")
 
-project("TestCSharp.NUnit-2.6.4")
-    kind("SharedLib")
-    language("C#")
+--project("TestCSharp.NUnit-2.6.4")
+--    kind("SharedLib")
+--    language("C#")
 
-    files { "../src/TestCSharp.NUnit-2.6.4/**.cs" }
+--    files { "../src/TestCSharp.NUnit-2.6.4/**.cs" }
 
-    links { "dependencies/nunit-2.6.4/NUnit-2.6.4/bin/nunit.framework.dll" }
+--    links { "dependencies/nunit-2.6.4/NUnit-2.6.4/bin/nunit.framework.dll" }
 
-    configuration { "vs*" }
-        postbuildcommands { "\"$(SolutionDir)..\\dependencies\\nunit-2.6.4\\NUnit-2.6.4\\bin\\nunit-console.exe\" $(TargetPath)" }
+--    configuration { "vs*" }
+--        postbuildcommands { "\"$(SolutionDir)..\\dependencies\\nunit-2.6.4\\NUnit-2.6.4\\bin\\nunit-console.exe\" $(TargetPath)" }
 
 project("TestCSharp.NUnit-3.2.0")
     kind("SharedLib")
