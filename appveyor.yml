@@ -31,7 +31,8 @@ install:
 
 test:
     assemblies:
-      - '**\TestCSharp.NUnit.dll'
+      - '**\TestCSharp.NUnit-2.6.4.dll'
+      - '**\TestCSharp.NUnit-3.2.0.dll'
 
 on_finish:
     # remote desktop
