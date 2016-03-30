@@ -5,9 +5,9 @@ pushd %~dp0
 if not exist "dependencies" (mkdir "dependencies")
 cd dependencies
 
-set nunit_url="https://github.com/nunit/nunit/releases/download/3.2.0/NUnit-3.2.0.zip"
-set nunit_file="NUnit-3.2.0.zip"
-set nunit_dir="nunit"
+set nunit_url="https://github.com/nunit/nunitv2/releases/download/2.6.4/NUnit-2.6.4.zip"
+set nunit_file="NUnit-2.6.4.zip"
+set nunit_dir="nunit-2.6.4"
 
 if not exist %nunit_file% (wget --no-check-certificate %nunit_url%)
 

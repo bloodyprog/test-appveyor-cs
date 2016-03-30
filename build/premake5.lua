@@ -18,7 +18,7 @@ project("TestCSharp.NUnit")
 
     files { "../src/TestCSharp/**.cs" }
 
-    links { "C:/Tools/NUnit3/bin/net-4.5/nunit.framework.dll" }
+    links { "dependencies/nunit-2.6.4/NUnit-2.6.4/bin/nunit.framework.dll" }
 
     configuration { "vs*" }
-        postbuildcommands { "nunit3-console.exe $(TargetPath)" }
+        postbuildcommands { "\"$(SolutionDir)..\\dependencies\\nunit-2.6.4\\NUnit-2.6.4\\bin\\nunit-console.exe\" $(TargetPath)" }
