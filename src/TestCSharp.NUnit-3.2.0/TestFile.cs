@@ -21,7 +21,7 @@ namespace TestCSharp
         [Test]
         public void TestCase_C()
         {
-            Assert.IsTrue(true);
+            Assert.IsTrue(false);
         }
     }
 }
