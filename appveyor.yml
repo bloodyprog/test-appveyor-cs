@@ -22,7 +22,7 @@ install:
     # test batch setup
     - build\setup-premake.bat
     - build\setup-nunit-2.6.4.bat
-    #- build\setup-nunit-3.2.0.bat
+    - build\setup-nunit-3.2.0.bat
 
     # test build system
     - cd build
